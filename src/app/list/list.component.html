@@ -1,0 +1,19 @@
+<div class="weather-list">
+  <a class="weather-item" *ngFor="let item of result" (click)="openDetails(item.id)">
+    <div class="temperature">
+      {{item.main.temp}}ºC
+    </div>
+    <div class="information">
+      <div class="locality">
+        <p class="city-name">{{item.name}},{{item.sys.country}}</p>
+        <img src="{{'http://openweathermap.org/images/flags/'+ item.sys.country.toLowerCase() +'.png'}}" class="country-flag">
+      </div>
+      <p class="max"><span>Max:</span> {{item.main.temp_max}}ºC</p>
+      <p class="min"><span>Min:</span> {{item.main.temp_min}}ºC</p>
+    </div>
+    <div class="icon-overview">
+      <img src="{{'https://openweathermap.org/img/w/'+ item.weather[0].icon +'.png'}}" class="icon">
+      <p class="text">{{item.weather[0].description}}</p>
+    </div>
+  </a>
+</div>
