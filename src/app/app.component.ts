@@ -9,8 +9,4 @@ import { Router } from '@angular/router';
 
 export class AppComponent {
   constructor(private router: Router) { }
-  
-  searchCity(city) {
-    this.router.navigate(['/search'], { queryParams: { q: city } });
-  }
 }

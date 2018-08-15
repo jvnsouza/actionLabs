@@ -1,0 +1,238 @@
+.titleText {
+  text-align: center;
+}
+
+.titleText h2 {
+  font-size: 36px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3c3c3c;
+  margin: 40px 0 10px 0;
+}
+
+.titleText p {
+  margin: 0 0 30px 0;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3c3c3c;
+  opacity: 0.5;
+}
+
+.forecast-list {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+.forecast-today .temperature {
+  width: calc((45% - 80px));
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  border: solid 1px #f0f0f0;
+  height: 200px;
+  line-height: 100px;
+  text-align: center;
+  font-family: Roboto;
+
+  font-weight: bold;
+  text-align: center;
+  color: #3c3c3c;
+  vertical-align: top;
+  margin: 40px;
+}
+.forecast-today .temperature .icon-overview {
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  position: relative;
+}
+
+.forecast-today .temperature .icon-overview .text {
+  line-height: 14px;
+  margin: 0;
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  font-size: 14px;
+  font-style: italic;
+  color: #3c3c3c;
+}
+
+.forecast-today .temperature .icon-overview .icon {
+  line-height: 50px;
+}
+
+.forecast-today .information {
+  width: calc((55% - 42px));
+  display: inline-block;
+  margin: 40px 40px 40px 0;
+}
+.forecast-today .information p {
+  height: 30px;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+  text-align: right;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3c3c3c;
+}
+.forecast-today .information p span {
+  position: absolute;
+  left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3c3c3c;
+}
+.forecast-today .information .max {
+  color: #b30000;
+  font-weight: bold;
+}
+.forecast-today .information .min {
+  color: #4a90e2;
+  font-weight: bold;
+}
+
+.day-title {
+  margin-left: 40px;
+}
+
+.day-title h3 {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3c3c3c;
+  margin-right: 20px;
+}
+.day-title span {
+  display: inline-block;
+  opacity: 0.5;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3c3c3c;
+}
+
+.forecast-item {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 15px 0;
+  position: relative;
+}
+
+.forecast-item:hover {
+  background-color: #f0f0f0;
+}
+.bar {
+  visibility: hidden;
+}
+.forecast-item:hover .bar {
+  visibility: visible;
+  height: 100%;
+  background-color: #4a90e2;
+  width: 8px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.forecast-item .temperature {
+  display: inline-block;
+  width: calc((100% - 60px) / 3);
+  padding-left: 20px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3c3c3c;
+}
+
+.forecast-item .temperature span {
+  opacity: 0.5;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3c3c3c;
+}
+
+.forecast-item .icon-overview {
+  display: inline-block;
+  width: calc((100%) / 3);
+}
+
+.forecast-item .icon-overview .icon {
+  display: inline-block;
+  width: 45px;
+  vertical-align: bottom;
+  margin-right: 10px;
+}
+.forecast-item .icon-overview .text {
+  display: inline-block;
+  width: calc(100% - 70px);
+  opacity: 0.75;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3c3c3c;
+  vertical-align: bottom;
+}
+
+.forecast-item .information {
+  display: inline-block;
+  width: calc((100% - 20px) / 3);
+  vertical-align: bottom;
+}
+.forecast-item .information p {
+  margin-top: 0px;
+}
+
+.forecast-item .information .max {
+  color: #b30000;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.forecast-item .information .min {
+  color: #4a90e2;
+  font-weight: bold;
+}

@@ -1,3 +1,14 @@
+<div class="header-color header-cfg-big">
+  <div class="header-container">
+    <h1 class="title">Weather in your city</h1>
+    <div class="input-wrapper">
+      <button type="button" (click)="searchCity(city.value)">
+        <i class="ion-search"></i>
+      </button>
+      <input #city class="input" type="text" placeholder="Your city name" (keyup.enter)="searchCity(city.value)">
+    </div>
+  </div>
+</div>
 <div class="weather-list">
   <a class="weather-item" *ngFor="let item of result" (click)="openDetails(item.id)">
     <div class="temperature">
@@ -5,15 +16,20 @@
     </div>
     <div class="information">
       <div class="locality">
-        <p class="city-name">{{item.name}},{{item.sys.country}}</p>
+        <p class="city-name">{{item.name}}, {{item.sys.country}}</p>
         <img src="{{'http://openweathermap.org/images/flags/'+ item.sys.country.toLowerCase() +'.png'}}" class="country-flag">
       </div>
-      <p class="max"><span>Max:</span> {{item.main.temp_max}}ºC</p>
-      <p class="min"><span>Min:</span> {{item.main.temp_min}}ºC</p>
+      <p class="max">
+        <span>Max:</span> {{item.main.temp_max}}ºC</p>
+      <p class="min">
+        <span>Min:</span> {{item.main.temp_min}}ºC</p>
     </div>
     <div class="icon-overview">
       <img src="{{'https://openweathermap.org/img/w/'+ item.weather[0].icon +'.png'}}" class="icon">
       <p class="text">{{item.weather[0].description}}</p>
     </div>
+  </a>
+  <a *ngIf="!result.length" class="weather-item">
+    <h2 class="empty-result">Não há resultados para sua busca.</h2>
   </a>
 </div>

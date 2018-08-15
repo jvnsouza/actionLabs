@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { PromiseType } from 'protractor/built/plugins';
+
+import { City } from './city.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +21,8 @@ export class WeatherService {
       this
         .http
         .get(`${this.url}/find?q=${city}&appid=${this.appid}&units=metric`)
-        .subscribe((data) => {
-          resolve(data);
+        .subscribe((data: City) => {
+          resolve(data.list);
         });
     });
   }
@@ -42,8 +43,8 @@ export class WeatherService {
       this
         .http
         .get(`${this.url}/forecast?id=${cityId}&appid=${this.appid}&units=metric`)
-        .subscribe((data) => {
-          resolve(data);
+        .subscribe((data: City) => {
+          resolve(data.list);
         });
     });
   }

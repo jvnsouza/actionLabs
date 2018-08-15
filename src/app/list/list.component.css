@@ -1,88 +1,119 @@
-.weather-list{
-    width: 90%;
-    margin: -50px auto 0 auto;
-    display: block;
-   
+.weather-list {
+  width: 90%;
+  margin: -50px auto 0 auto;
+  display: block;
 }
 
-.weather-item{
-    height: 160px;
-    border-radius: 4px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
-    margin: 0;
-    margin-bottom: 15px;
-    display: block;
-    cursor: pointer;
+.weather-item {
+  height: 160px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+  margin: 0;
+  margin-bottom: 15px;
+  display: block;
+  cursor: pointer;
 }
 
-.temperature{
-    width: calc((100% - 60px) / 3);
-    display: inline-block;
-    border-radius: 4px;
-    background-color: #f0f0f0;
-    border: solid 1px #f0f0f0;
-    height: 140px;
-    line-height: 140px;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 48px;
-    font-weight: bold;
-    text-align: center;
-    color: #3c3c3c;
-    vertical-align: top;
-    margin: 10px 10px 20px 10px;
+.temperature {
+  width: calc((100% - 60px) / 3);
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  border: solid 1px #f0f0f0;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+  font-family: Roboto;
+
+  font-weight: bold;
+  text-align: center;
+  color: #3c3c3c;
+  vertical-align: top;
+  margin: 10px 10px 10px 10px;
 }
 
-.information{
-    width: calc((100% - 60px) / 3);
-    display: inline-block;
-    vertical-align: top;
+@media only screen and (max-width: 440px) {
+  .temperature {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 440px) and (max-width: 660px) {
+  .temperature {
+    font-size: 34px;
+  }
+}
+@media only screen and (min-width: 660px) {
+  .temperature {
+    font-size: 44px;
+  }
 }
 
-.information .locality{
-    height: 30px;
-    margin-top: 20px;
+.information {
+  width: calc((100% - 20px) / 3);
+  display: inline-block;
+  vertical-align: top;
 }
 
-.information .locality .city-name{
-    margin: 0;
-     font-size: 24px;
-     font-weight: bold;
-     line-height: 30px;
-     color: #39a3db;
-    display: inline-block;
+.information .locality {
+  height: 30px;
+  margin-top: 20px;
 }
 
-.information .locality .country-flag{
-    display: inline-block;
-    margin: 0 0 5px 10px;
+.information .locality .city-name {
+  margin: 0;
+
+  font-weight: bold;
+  line-height: 30px;
+  color: #39a3db;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 440px) {
+  .information .locality .city-name {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 440px) and (max-width: 660px) {
+  .information .locality .city-name {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 660px) {
+  .information .locality .city-name {
+    font-size: 24px;
+  }
+}
+
+.information .locality .country-flag {
+  display: inline-block;
+  margin: 0 0 5px 10px;
 }
 
 .information .max,
 .information .min {
- font-size: 16px;
- color: #b30000;
- font-weight: bold;
+  font-size: 16px;
+  color: #b30000;
+  font-weight: bold;
 }
 
 .information .min {
-  color: #4a90e2
+  color: #4a90e2;
 }
 
 .information .max span,
-.information .min span{
-     font-size: 14px;
-     color: #3c3c3c;
-     font-weight: normal;
-     margin-right: 10px;
+.information .min span {
+  font-size: 14px;
+  color: #3c3c3c;
+  font-weight: normal;
+  margin-right: 10px;
 }
 
-.icon-overview{
-    width: calc((100% - 60px) / 3);
-    display: inline-block;
-    vertical-align: top;
-    margin: 30px 10px 10px 10px;
+.icon-overview {
+  width: calc((100% - 60px) / 3);
+  display: inline-block;
+  vertical-align: top;
+  margin: 30px 10px 10px 10px;
 }
 
 .icon-overview .icon {
@@ -91,14 +122,26 @@
   margin: 0 auto;
 }
 
-.icon-overview .text{
-    text-align: center;
-     font-size: 14px;
-     font-weight: normal;
-     font-style: italic;
-     font-stretch: normal;
-     line-height: normal;
-     letter-spacing: normal;
-     text-align: center;
-     color: #3c3c3c;
+.icon-overview .text {
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3c3c3c;
+}
+
+.empty-result {
+  line-height: 160px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3c3c3c;
 }
